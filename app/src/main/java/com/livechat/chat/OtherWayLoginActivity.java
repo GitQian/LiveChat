@@ -47,7 +47,7 @@ public class OtherWayLoginActivity extends BaseActivity {
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
+//        overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
     }
 
     /**
@@ -212,7 +212,7 @@ public class OtherWayLoginActivity extends BaseActivity {
     public void doForgetPwd(View view) {
         Intent intent = new Intent(this, ForgetPwdActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -223,7 +223,7 @@ public class OtherWayLoginActivity extends BaseActivity {
     public void doRegisterAccount(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -234,7 +234,7 @@ public class OtherWayLoginActivity extends BaseActivity {
     public void doQuestion(View view) {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -245,7 +245,7 @@ public class OtherWayLoginActivity extends BaseActivity {
     public void doOtherWayLogin(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -278,7 +278,7 @@ public class OtherWayLoginActivity extends BaseActivity {
                     Log.d("LoginActivity", "--onSuccess:" + userId);
                     Intent intent = new Intent(OtherWayLoginActivity.this, LiveChatMainActivity.class);// LoggedInActivity
                     startActivity(intent);
-                    overridePendingTransition(R.anim.activity_open, 0);
+//                    overridePendingTransition(R.anim.activity_open, 0);
                     finish();
                 }
 

@@ -38,7 +38,7 @@ public class LiveChatMainActivity extends BaseActivity implements View.OnClickLi
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
+//        overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
     }
     /**
      * 初始化视图控件UI

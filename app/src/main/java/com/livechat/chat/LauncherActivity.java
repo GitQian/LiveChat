@@ -194,7 +194,7 @@ public class LauncherActivity extends BaseActivity {
 //                    Log.d("LoginActivity", "--onSuccess:" + userId);
                     Intent intent = new Intent(LauncherActivity.this, LiveChatMainActivity.class);
                     startActivity(intent);
-                    overridePendingTransition(R.anim.activity_open, 0);
+//                    overridePendingTransition(R.anim.activity_open, 0);
                     finish();
                 }
 

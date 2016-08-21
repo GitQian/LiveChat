@@ -211,7 +211,7 @@ public class LoginActivity extends BaseActivity {
     public void doForgetPwd(View view) {
         Intent intent = new Intent(this, ForgetPwdActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -222,7 +222,7 @@ public class LoginActivity extends BaseActivity {
     public void doRegisterAccount(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -233,7 +233,7 @@ public class LoginActivity extends BaseActivity {
     public void doQuestion(View view) {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -244,7 +244,7 @@ public class LoginActivity extends BaseActivity {
     public void doOtherWayLogin(View view) {
         Intent intent = new Intent(this, OtherWayLoginActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     /**
@@ -255,13 +255,13 @@ public class LoginActivity extends BaseActivity {
     public void doRlCountry(View view) {
         Intent intent = new Intent(this, CountyCodeActivity.class);
         startActivityForResult(intent, Constant.COUNTY_CODE);
-        overridePendingTransition(R.anim.activity_open, 0);
+//        overridePendingTransition(R.anim.activity_open, 0);
     }
 
     @Override
     public void finish() {
         super.finish();
-        LoginActivity.this.overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
+//        LoginActivity.this.overridePendingTransition(R.anim.activity_tab_pay_close, R.anim.activity_tab_pay_close);
     }
 
     /**
@@ -307,7 +307,7 @@ public class LoginActivity extends BaseActivity {
                     Log.d("LoginActivity", "--onSuccess:" + userId);
                     Intent intent = new Intent(LoginActivity.this, LiveChatMainActivity.class);// LoggedInActivity
                     startActivity(intent);
-                    overridePendingTransition(R.anim.activity_open, 0);
+//                    overridePendingTransition(R.anim.activity_open, 0);
                     finish();
                 }
 
