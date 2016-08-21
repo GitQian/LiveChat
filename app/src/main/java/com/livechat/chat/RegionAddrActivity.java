@@ -2,6 +2,7 @@ package com.livechat.chat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Xml;
 import android.view.View;
 import android.widget.AdapterView;
@@ -210,6 +211,7 @@ public class RegionAddrActivity extends BaseActivity implements AdapterView.OnIt
                 return;
             }
             if (bdLocation != null && bdLocation.getLocType() != BDLocation.TypeServerError) {
+                Log.i("qiansheng", bdLocation.getLatitude() + "");
                 String sResult = bdLocation.getCountry() + " " + bdLocation.getProvince() + " " + bdLocation.getCity();
                 // 国别
                 String country = bdLocation.getCountry();
