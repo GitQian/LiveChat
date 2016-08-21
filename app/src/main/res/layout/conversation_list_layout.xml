@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/selector_item_bg"
+    android:baselineAligned="true"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="8dp">
+
+        <com.livechat.chat.widget.RoundedRectImageView
+            android:id="@+id/ivConversationPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/customer_service" />
+
+        <ImageView
+            android:id="@+id/ivOnLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/online" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTargetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="客服0号"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvUptime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tvTargetName"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="1dp"
+            android:singleLine="true"
+            android:text="17:02"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvRedNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvUptime"
+            android:layout_below="@id/tvUptime"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="3dp"
+            android:background="@mipmap/circle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTargetName"
+            android:layout_marginLeft="13dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="客户询问的问题"
+            android:textColor="#EC9152"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvConversationContent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvQuestion"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="您好！请问您有什么问题需要咨询吗?"
+            android:textColor="#7F7F7F"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

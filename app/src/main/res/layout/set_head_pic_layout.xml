@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMainPopu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_above="@+id/rlBottom"
+        android:background="#ADADAD" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnCamera"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_item_bg"
+            android:text="拍照"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/btnCamera"
+            android:background="#ADADAD" />
+
+        <Button
+            android:id="@+id/btnLocalhost"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/view1"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_item_bg"
+            android:text="从手机相册选择"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/btnLocalhost"
+            android:background="#ADADAD" />
+
+        <Button
+            android:id="@+id/btnSavePic"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/view2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_item_bg"
+            android:text="保存照片"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/btnSavePic"
+            android:background="#ADADAD" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/view3"
+            android:background="#ebebeb" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/tv"
+            android:background="#ADADAD" />
+
+        <Button
+            android:id="@+id/btnCancle"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/view4"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_item_bg"
+            android:text="取消"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@id/btnCancle"
+            android:layout_marginBottom="1dp"
+            android:background="#ADADAD" />
+    </RelativeLayout>
+</RelativeLayout>

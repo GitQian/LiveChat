@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvUpdateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="昨天 13:30"
+        android:textColor="#919194"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shape_info_lv_bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flTitleTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivInfoBg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rlAlpha"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:background="#e0000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:background="#006C6B60">
+
+                <TextView
+                    android:id="@+id/tvInfoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:text="百家乐幸运一条龙"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@drawable/selector_lv_item_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvItemTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="75dp"
+                android:lines="2"
+                android:text="研究发现：赌博最好空腹，靠直觉能赢"
+                android:textColor="#231F20"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivItemTitle1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/logo" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemTitle2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@drawable/selector_lv_item_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvItemTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="75dp"
+                android:text="Zynga有望很快在英国发布真钱赌博游戏"
+                android:textColor="#231F20"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivItemTitle2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/logo" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@drawable/selector_lv_item_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvItemTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="75dp"
+                android:text="Zynga有望很快在英国发布真钱赌博游戏"
+                android:textColor="#231F20"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivItemTitle3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/logo" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemTitle4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0.8dp"
+            android:layout_marginRight="0.8dp"
+            android:background="@drawable/selector_lv_item_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvItemTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="75dp"
+                android:text="Zynga有望很快在英国发布真钱赌博游戏"
+                android:textColor="#231F20"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivItemTitle4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/logo" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>

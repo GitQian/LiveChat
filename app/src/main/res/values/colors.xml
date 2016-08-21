@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="actionbar_bg_old">#233050</color>
+    <color name="actionbar_bg">#24324f</color>
+    <color name="linearcolor">#DADCD9</color><!-- linear背景色 -->
+    <color name="white">#FFFFFF</color> <!-- 白色 -->
+    <color name="menuBar_bg">#243141</color>
+    <color name="btn_normal">#FF1452</color>
+    <color name="btn_pressed">#FB3875</color>
+    <color name="gray_bg">#E3E3E3</color>
+    <color name="layout_bg">#ebebeb</color>
+    <color name="font_color">#22314C</color>
+    <color name="gv_color">#F9F9F9</color>
+
+</resources>

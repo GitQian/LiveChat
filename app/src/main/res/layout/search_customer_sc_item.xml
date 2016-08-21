@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/selector_item_bg">
+
+        <ImageView
+            android:id="@+id/ivHeadPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:src="@mipmap/head" />
+
+        <TextView
+            android:id="@+id/tvUserAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ivHeadPic"
+            android:singleLine="true"
+            android:text="User Account"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

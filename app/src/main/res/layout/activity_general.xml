@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".GeneralActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/activity_layout_marginTop"
+        android:background="@color/actionbar_bg">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:src="@mipmap/back" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivBack"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:singleLine="true"
+            android:text="设置"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="通用"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlTitle"
+        android:layout_marginTop="13dp"
+        android:background="#ADADAD" />
+
+    <RelativeLayout
+        android:id="@+id/rlMultilingual"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view1"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlMultilingual">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="多语言"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlMultilingual"
+        android:background="#ADADAD" />
+
+    <RelativeLayout
+        android:id="@+id/rlFontSize"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view2"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlFontSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="字体大小"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlFontSize"
+        android:background="#ADADAD" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/view3"
+        android:layout_marginTop="17dp"
+        android:background="#ADADAD" />
+
+    <Button
+        android:id="@+id/btnEmptyChatRecord"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view10"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doEmptyChatRecord"
+        android:text="清空聊天记录"
+        android:textColor="#231F20"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/btnEmptyChatRecord"
+        android:background="#ADADAD" />
+
+</RelativeLayout>

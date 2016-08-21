@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actionbar_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:onClick="doRLayout">
+
+        <ImageView
+            android:id="@+id/ivTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:singleLine="true"
+            android:text="LiveChat"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.6"
+        android:onClick="doRLayout">
+
+        <RelativeLayout
+            android:id="@+id/rlCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@mipmap/sign_in"
+            android:onClick="doRlCountry">
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="国家"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tvCountry"
+                android:singleLine="true"
+                android:text="中国"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/arrow_next" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCountry"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@mipmap/sign_in">
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="+86"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tvPhone"
+                android:background="@null"
+                android:hint="请输入手机号码"
+                android:inputType="number|phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPhone"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@mipmap/sign_in">
+
+            <TextView
+                android:id="@+id/tvPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="密码"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/tvPwd"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="text"
+                android:maxLength="16"
+                android:password="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPwd"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="14dp">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_btn_bg"
+                android:onClick="doBtnLogin"
+                android:text="登录"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:onClick="doRLayout">
+
+        <Button
+            android:id="@+id/tvForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="54dp"
+            android:background="@null"
+            android:onClick="doForgetPwd"
+            android:singleLine="true"
+            android:text="忘记密码"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/tvForgetPwd"
+            android:layout_alignTop="@id/tvForgetPwd"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tvForgetPwd"
+            android:background="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_toRightOf="@id/view"
+            android:background="@null"
+            android:onClick="doRegisterAccount"
+            android:singleLine="true"
+            android:text="注册账号"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="58dp"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:onClick="doQuestion"
+            android:src="@mipmap/question" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:onClick="doOtherWayLogin"
+            android:singleLine="true"
+            android:text="其他方式登陆"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

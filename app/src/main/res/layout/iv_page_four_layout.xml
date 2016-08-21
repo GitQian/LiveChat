@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/page_log4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/topIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:singleLine="true"
+        android:text="LiveChat"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:singleLine="true"
+        android:text="立即体验"
+        android:textColor="#F0002F"
+        android:textSize="39sp"
+        android:typeface="normal" />
+
+    <ImageView
+        android:id="@+id/ivSlice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tvTitle"
+        android:clickable="true"
+        android:src="@mipmap/red_right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        android:text="专业客服的贴心服务"
+        android:textColor="#A0A0A0"
+        android:textSize="19sp" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_item_bg">
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:text="国家"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ivPoint"
+            android:singleLine="true"
+            android:text="已选地区"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="21dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

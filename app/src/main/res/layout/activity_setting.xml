@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/activity_layout_marginTop"
+        android:background="@color/actionbar_bg">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:src="@mipmap/back" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivBack"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:singleLine="true"
+            android:text="我"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlTitle"
+        android:layout_marginTop="13dp"
+        android:background="#ADADAD" />
+
+    <RelativeLayout
+        android:id="@+id/rlAccount"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view1"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlAccount">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="帐号与安全"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlAccount"
+        android:background="#ADADAD" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/view2"
+        android:layout_marginTop="15dp"
+        android:background="#ADADAD" />
+
+    <RelativeLayout
+        android:id="@+id/rlNewNotify"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view3"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlNewNotify">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="新消息通知"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlNewNotify"
+        android:background="#ADADAD"
+        android:visibility="gone" />
+
+    <!-- 隐藏隐私 -->
+    <RelativeLayout
+        android:id="@+id/rlPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view4"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlPrivacy"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="隐私"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlPrivacy"
+        android:background="#ADADAD"
+        android:visibility="gone" />
+
+    <!-- 隐藏通用 -->
+    <RelativeLayout
+        android:id="@+id/rlGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view5"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlGeneral"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="通用"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlGeneral"
+        android:background="#ADADAD" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/view6"
+        android:layout_marginTop="15dp"
+        android:background="#ADADAD"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlHelpFeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view7"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlHelpFeedBack">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="帮助与反馈"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlHelpFeedBack"
+        android:background="#ADADAD"
+        android:visibility="gone" />
+
+    <!-- 隐藏关于LiveChat -->
+    <RelativeLayout
+        android:id="@+id/rlAboutLiveChat"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view8"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doRlAboutLiveChat"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33dp"
+            android:text="关于LiveChat"
+            android:textColor="#231F20"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/rlAboutLiveChat"
+        android:background="#ADADAD" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/view9"
+        android:layout_marginTop="15dp"
+        android:background="#ADADAD" />
+
+    <Button
+        android:id="@+id/btnExitLogin"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view10"
+        android:background="@drawable/selector_item_bg"
+        android:onClick="doBtnExitLogin"
+        android:text="退出登录"
+        android:textColor="#231F20"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/btnExitLogin"
+        android:background="#ADADAD" />
+
+</RelativeLayout>

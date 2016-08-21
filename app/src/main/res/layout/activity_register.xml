@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/activity_layout_marginTop"
+        android:background="@color/actionbar_bg">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:src="@mipmap/back" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivBack"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:singleLine="true"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="注册账号"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:onClick="doReLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="请输入您的手机号"
+            android:textColor="#21292C"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:onClick="doReLayout">
+
+        <RelativeLayout
+            android:id="@+id/rlCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@mipmap/text_box"
+            android:onClick="doRlCountryCode">
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="国家"
+                android:textColor="#21292C"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvAdr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/iv"
+                android:singleLine="true"
+                android:text="中国"
+                android:textColor="#21292C"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCountry"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/text_box">
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="+86"
+                android:textColor="#21292C"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="99dp"
+                android:layout_toRightOf="@id/tvPhone"
+                android:background="@null"
+                android:hint="请输入手机号码"
+                android:inputType="phone|number"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="#21292C"
+                android:textColorHint="#21292C"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPhone"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="33dp">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_btn_bg"
+                android:onClick="doRegister"
+                android:text="获取验证码"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="55dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/tvTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:text="轻触上面的“注册”按钮，即表示你同意"
+            android:textColor="#A0A0A0"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTop"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="doTvServiceAgreement"
+            android:singleLine="true"
+            android:text="表示你同意"
+            android:textColor="#A0A0A0"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

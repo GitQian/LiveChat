@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="2dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#ADADAD" />
+
+    <TextView
+        android:id="@+id/pop_computer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="将删除所有聊天记录"
+        android:textColor="#7F7F7F"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#ADADAD" />
+
+    <TextView
+        android:id="@+id/mClearChat"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="清空聊天记录"
+        android:textColor="#D90000"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#ADADAD" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/layout_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#ADADAD" />
+
+    <TextView
+        android:id="@+id/mCancle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#231F20"
+        android:textSize="15sp" />
+
+</LinearLayout>

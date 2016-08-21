@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FeedBackTwoActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/activity_layout_marginTop"
+        android:background="@color/actionbar_bg">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:src="@mipmap/back" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivBack"
+            android:background="@null"
+            android:onClick="doReturn"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:onClick="doIvMore"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlTitle"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="130dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginLeft="17dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="请选择问题发生的情景"
+                android:textColor="#808080"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/tv1"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view1"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="回答不了问题"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    style="@style/customCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:background="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem1"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view2"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="服务态度不佳"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    style="@style/customCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:background="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem2"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem3"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view3"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="给予不明确的指示"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    style="@style/customCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:background="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem3"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem4"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view4"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="其他"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    style="@style/customCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:background="@null"
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem4"
+                android:background="#B7B7B7" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/view5"
+                android:layout_marginTop="23dp"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem5"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view6"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="问题发生时间"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_toLeftOf="@+id/iv1"
+                    android:background="@null"
+                    android:digits="0123456789-"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="选择时间"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#C7C7C7"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem5"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem6"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view7"
+                android:background="@drawable/selector_item_bg"
+                android:onClick="doQuestContent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="补充内容"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_toLeftOf="@+id/iv2"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:hint="未填写"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="#C7C7C7"
+                    android:textColorHint="#C7C7C7"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="23dp"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem6"
+                android:background="#B7B7B7" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/view8"
+                android:layout_marginTop="23dp"
+                android:background="#B7B7B7" />
+
+            <RelativeLayout
+                android:id="@+id/rlQuestItem7"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/view9"
+                android:background="@drawable/selector_item_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:text="联系电话"
+                    android:textColor="#231F20"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="42dp"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="选填，便于我们与你联系"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="#231F20"
+                    android:textColorHint="#C7C7C7"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@id/rlQuestItem7"
+                android:background="#B7B7B7" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/view10"
+                android:layout_margin="30dp"
+                android:background="@drawable/selector_btn_bg"
+                android:onClick="doBtnSubmit"
+                android:text="提交"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

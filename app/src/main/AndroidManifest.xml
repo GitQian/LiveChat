@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.livechat.chat"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- PROTECTION_DANGEROUS -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- BaiDu Push -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/ActivityTheme"> <!-- Theme.AppCompat.Light.NoActionBar -->
+        <activity
+            android:name=".GuidePageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.LiveChatMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerCodeLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoggedInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VersionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeSexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PersonInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsNotifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetHeadPicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeedBackTwoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".FeedBackThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModifyUserNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.livechat.chat"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CountyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GeneralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IndividualitySignatureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PublicWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendReceiveMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpAndFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CloseOrExitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SwitchAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClearChatRecorderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StartOrCloseNewsWarmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeEmailAdrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetNewPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegionAddrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProvinceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OtherWayLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchCustomerScActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LauncherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name=".service.MyPushMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 4.6.2版本增加一个可选的Activity声明 -->
+        <activity
+            android:name="com.baidu.android.pushservice.PushKeepAlive"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="nAVfa93K5ZSLrdzezwe8pSLti6qHiRkv" />
+        <meta-data
+            android:name="api_key"
+            android:value="f8GxpikXKE7AZTykSO3Ks4sn" />
+    </application>
+
+</manifest>

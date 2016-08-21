@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@mipmap/tips_bg"
+    android:gravity="center"
+    android:paddingBottom="15dp"
+    android:paddingLeft="37dp"
+    android:paddingRight="37dp"
+    android:paddingTop="15dp">
+
+    <View
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tips_loading_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/msg_load_ing"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">LiveChat</string>
+    <string name="msg_load_ing">加载中....</string>
+
+    <string name="imageMessage">[图片]</string>
+    <string name="voiceMessage">[语音]</string>
+    <string name="locationMessage">[位置]</string>
+    <string name="videoMessage">[视频]</string>
+
+</resources>

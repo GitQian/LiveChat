@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".fragment.LiveChatMainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_above="@+id/llBottom"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/menuBar_bg"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlCustomerSc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivCustomerSc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/customer_sc_pressed" />
+
+            <TextView
+                android:id="@+id/tvCustomerSc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCustomerSc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:text="客服中心"
+                android:textColor="#FF1552"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlInfoAct"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivInfoAct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/info_act_normal2" />
+
+            <TextView
+                android:id="@+id/tvInfoAct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivInfoAct"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:text="资讯"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/me_normal" />
+
+            <TextView
+                android:id="@+id/tvMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivMe"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:text="我"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOther"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivOther"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/e8_normal" />
+
+            <TextView
+                android:id="@+id/tvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivOther"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:text="其他"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

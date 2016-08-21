@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a0000000"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#C4C4C4" />
+
+    <LinearLayout
+        android:id="@+id/infoLink"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlMemberDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/nba_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="前线动态"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/rlCalendarMonthBaby"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/nba_info2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="体育资讯"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/rlNewPrefer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/new_prefer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="NEW优惠"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#C4C4C4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlDynamic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/points_for" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="积分兑换"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/rlNBAInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/calendar_month_baby" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="月历宝贝"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/rlPointsFor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/member_date" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="28会员日"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#C4C4C4" />
+    <ListView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="0.1dp"
+        android:divider="#ebebeb"
+        />
+
+    <!--android:dividerHeight="0.7dp"-->
+    <!--android:divider="#C4C4C4"-->
+
+</LinearLayout>

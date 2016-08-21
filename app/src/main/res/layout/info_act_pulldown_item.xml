@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selector_lv_item_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivInfoActIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/nba_info" />
+
+        <TextView
+            android:id="@+id/tvInfoAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivInfoActIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:singleLine="true"
+            android:text="前线动态"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/infoLink"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#ebebeb"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relative_menu1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_veiw1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/nba_info" />
+
+            <TextView
+                android:id="@+id/text_v1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_veiw1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="前线动态"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/relative_menu2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_veiw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/nba_info2" />
+
+            <TextView
+                android:id="@+id/text_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_veiw2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="体育资讯"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:background="#C4C4C4" />
+
+        <RelativeLayout
+            android:id="@+id/relative_menu3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_lv_item_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_veiw3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/new_prefer" />
+
+            <TextView
+                android:id="@+id/text_v3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_veiw3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="NEW优惠"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
