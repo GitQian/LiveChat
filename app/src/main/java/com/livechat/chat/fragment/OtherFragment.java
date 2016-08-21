@@ -167,7 +167,7 @@ public class OtherFragment extends Fragment implements AdapterView.OnItemClickLi
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        CommonUtil.doJumpToPublicWebView(getActivity(), true, "", eOtherUrlList.get(position).getsMenuName(), "", eOtherUrlList.get(position).getsMenuUrl());
+        CommonUtil.doJumpToPublicWebView(getActivity(), true, "", "", "", eOtherUrlList.get(position).getsMenuUrl());
     }
 
     /**

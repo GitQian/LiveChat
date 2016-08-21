@@ -14,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
     private RelativeLayout mRlActionBar;
     private Button btnWvOther;
     private TextView tvWvTitle, tvWvMasterTitle, tvWarm;
+    private ImageView imgTitle;
     private WebView webView;
     private ProgressBar progressBar;
     private SwipeRefreshLayout mSwipeRefresh;
@@ -52,6 +54,7 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
         tvWvTitle = (TextView) this.findViewById(R.id.tvWvTitle);
         tvWvMasterTitle = (TextView) this.findViewById(R.id.tvWvMasterTitle);
         btnWvOther = (Button) this.findViewById(R.id.btnWvOther);
+        imgTitle = (ImageView) this.findViewById(R.id.img_title_oter);
         progressBar = (ProgressBar) this.findViewById(R.id.progressBar);
         mSwipeRefresh = (SwipeRefreshLayout) this.findViewById(R.id.swipeRefresh);
         webView = (WebView) this.findViewById(R.id.webView);
@@ -62,6 +65,10 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
         String subTitle = bundle.getString("subTitle");
         masterTitle = bundle.getString("masterTitle");
         String otherTitle = bundle.getString("otherTitle");
+        if (TextUtils.isEmpty(masterTitle)) {
+            imgTitle.setVisibility(View.VISIBLE);
+            tvWvMasterTitle.setVisibility(View.GONE);
+        }
         sWebViewUrl = bundle.getString("webViewUrl");
         if (whetherShow) {// true:显示
             mRlActionBar.setVisibility(View.VISIBLE);
@@ -100,7 +107,7 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
         wvSettings.setSaveFormData(false);
 
         wvSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-//        wvSettings.setLoadWithOverviewMode(true);// 页面适应手机屏幕的分辨率,完整的显示在屏幕上,可以放大缩小
+        wvSettings.setLoadWithOverviewMode(true);// 页面适应手机屏幕的分辨率,完整的显示在屏幕上,可以放大缩小
         wvSettings.setSupportZoom(false);// 仅支持双击缩放,不支持触摸缩放(4.0)
         wvSettings.setBuiltInZoomControls(false);// 是否可缩放
 
