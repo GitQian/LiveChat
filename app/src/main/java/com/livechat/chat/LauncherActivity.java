@@ -2,6 +2,7 @@ package com.livechat.chat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.alibaba.fastjson.JSON;
 import com.livechat.chat.entity.UserLoginInfoBean;
@@ -23,6 +24,8 @@ public class LauncherActivity extends BaseActivity {
 
     private UserLoginInfoService loginInfoService;
 
+    private Handler mHandler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +36,15 @@ public class LauncherActivity extends BaseActivity {
         if (CommonUtil.getUserLoginInfo(this, Constant.iLoginState_CODE).equals("1")) {// 已登陆,跳转到主页(自动登陆)
             doAutoLogin();
         } else {// 未登录, 跳转登陆界面
-            Intent intent = new Intent();
-            intent.setClass(this, LoginActivity.class);
-            startActivity(intent);
-            finish();
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent();
+                    intent.setClass(LauncherActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }, 1000);
         }
     }
 
