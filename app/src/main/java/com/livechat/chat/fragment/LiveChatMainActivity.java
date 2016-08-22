@@ -19,6 +19,7 @@ import com.livechat.chat.BaseActivity;
 import com.livechat.chat.LoginActivity;
 import com.livechat.chat.R;
 import com.livechat.chat.adapter.FragmentAdapter;
+import com.livechat.chat.utils.CommonUtil;
 
 import io.rong.imlib.RongIMClient;
 
@@ -54,6 +55,7 @@ public class LiveChatMainActivity extends BaseActivity implements View.OnClickLi
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            CommonUtil.saveUserLoginInfo(LiveChatMainActivity.this,"", "", "0", "");
                             Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
                             startActivity(intent);
                             finish();
@@ -62,6 +64,7 @@ public class LiveChatMainActivity extends BaseActivity implements View.OnClickLi
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            CommonUtil.saveUserLoginInfo(LiveChatMainActivity.this,"", "", "0", "");
                             Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
                             startActivity(intent);
                             finish();
