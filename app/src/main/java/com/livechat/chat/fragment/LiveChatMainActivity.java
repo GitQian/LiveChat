@@ -1,16 +1,24 @@
 package com.livechat.chat.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.livechat.chat.BaseActivity;
+import com.livechat.chat.LoginActivity;
 import com.livechat.chat.R;
 import com.livechat.chat.adapter.FragmentAdapter;
+
+import io.rong.imlib.RongIMClient;
 
 /**
  * 主界面
@@ -27,12 +35,37 @@ public class LiveChatMainActivity extends BaseActivity implements View.OnClickLi
     private ImageView ivCustomerSc, ivInfoAct, ivMe, ivOther;
     private TextView tvCustomerSc, tvInfoAct, tvMe, tvOther;
 
+    private Handler mHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_chat_main);
 
         initView();
+        mHandler  = new Handler(new Handler.Callback() {
+            @Override
+            public boolean handleMessage(Message msg) {
+                if (msg.what == 0){
+                    Toast.makeText(LiveChatMainActivity.this, "帐号在其他设备上登录！", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                return false;
+            }
+        });
+        RongIMClient.setConnectionStatusListener(new RongIMClient.ConnectionStatusListener() {
+            @Override
+            public void onChanged(ConnectionStatus connectionStatus) {
+                Log.d("qiansheng", "" + connectionStatus.getMessage().toString());
+                if ("Login on the other device, and be kicked offline.".equals(connectionStatus.getMessage())) {
+                    mHandler.sendEmptyMessage(0);
+                }else {
+
+                }
+            }
+        });
         addListener();
     }
     @Override
