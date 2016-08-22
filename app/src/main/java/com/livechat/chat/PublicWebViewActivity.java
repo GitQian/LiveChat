@@ -14,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -24,9 +25,10 @@ import com.livechat.chat.utils.CommonUtil;
 /**
  * 公共的WebView页面显示
  */
-public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
 
     private RelativeLayout mRlActionBar;
+    private ImageButton imgBtnBack;
     private Button btnWvOther;
     private TextView tvWvTitle, tvWvMasterTitle, tvWarm;
     private ImageView imgTitle;
@@ -51,6 +53,8 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
      */
     private void initUI() {
         mRlActionBar = (RelativeLayout) this.findViewById(R.id.rlTitle);
+        imgBtnBack = (ImageButton) this.findViewById(R.id.ivBack);
+        imgBtnBack.setOnClickListener(this);
         tvWvTitle = (TextView) this.findViewById(R.id.tvWvTitle);
         tvWvMasterTitle = (TextView) this.findViewById(R.id.tvWvMasterTitle);
         btnWvOther = (Button) this.findViewById(R.id.btnWvOther);
@@ -101,7 +105,7 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
         WebSettings wvSettings = webView.getSettings();
         wvSettings.setJavaScriptEnabled(true);// 支持js
         wvSettings.setDefaultTextEncodingName("UTF-8");
-//        wvSettings.setUseWideViewPort(false);// WebView双击变大,再双击后变小,当手动放大后,双击可以恢复到原始大小
+        wvSettings.setUseWideViewPort(true);// WebView双击变大,再双击后变小,当手动放大后,双击可以恢复到原始大小
         wvSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);// 加速WebView加载的方法,提高渲染的优先级
         wvSettings.setSavePassword(false);
         wvSettings.setSaveFormData(false);
@@ -250,4 +254,21 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ivBack:
+                if (webView.canGoBack()) {
+                    // 返回上一个页面
+                    webView.goBack();
+                } else {// 退出当前Activity
+                    finish();
+                }
+                break;
+
+            default:
+                break;
+        }
+
+    }
 }
