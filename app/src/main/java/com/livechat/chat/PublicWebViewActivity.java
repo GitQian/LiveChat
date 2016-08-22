@@ -117,9 +117,9 @@ public class PublicWebViewActivity extends BaseActivity implements SwipeRefreshL
 
         webView.requestFocus();// 触摸焦点起作用
         // 优先使用缓存(LOAD_CACHE_ELSE_NETWORK);不使用缓存(LOAD_NO_CACHE)
-        wvSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+//        wvSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         wvSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
-        webView.clearCache(true);
+//        webView.clearCache(true);
         // 加载传递过来的参数Url
         if (masterTitle.equals("资讯")) {
             //webView.loadData(sWebViewUrl,"text/html","UTF-8");
