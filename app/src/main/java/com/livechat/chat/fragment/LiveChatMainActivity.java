@@ -1,11 +1,13 @@
 package com.livechat.chat.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -47,10 +49,24 @@ public class LiveChatMainActivity extends BaseActivity implements View.OnClickLi
             @Override
             public boolean handleMessage(Message msg) {
                 if (msg.what == 0){
-                    Toast.makeText(LiveChatMainActivity.this, "帐号在其他设备上登录！", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
+//                    Toast.makeText(LiveChatMainActivity.this, "帐号在其他设备上登录！", Toast.LENGTH_LONG).show();
+                    new AlertDialog.Builder(LiveChatMainActivity.this).setCancelable(false).setTitle("登陆异常").setMessage("您的账号在其他设备登陆").setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            Intent intent = new Intent(LiveChatMainActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }).show();
                 }
                 return false;
             }
