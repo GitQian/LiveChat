@@ -54,6 +54,7 @@ public class RegisterActivity extends BaseActivity {
                     intent.putExtra("sign", 2);
                     startActivity(intent);
                     CommonUtil.showTips(getApplicationContext(), R.mipmap.smile, "验证码已发送");
+                    RegisterActivity.this.finish();
                     break;
                 case Constant.COUNTRIES_LIST_CODE:
                     // 返回支持发送验证码的国家列表
