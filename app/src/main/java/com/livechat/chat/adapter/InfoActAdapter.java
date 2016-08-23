@@ -104,31 +104,35 @@ public class InfoActAdapter extends BaseAdapter implements View.OnClickListener 
 
 
         ImageLoader.ImageListener listener = ImageLoader.getImageListener(viewHolder.ivInfoBg, 0, R.mipmap.customer_service);
+        ImageLoader.ImageListener listener1 = ImageLoader.getImageListener(viewHolder.ivItemTitle1, 0, R.mipmap.customer_service);
+        ImageLoader.ImageListener listener2 = ImageLoader.getImageListener(viewHolder.ivItemTitle2, 0, R.mipmap.customer_service);
+        ImageLoader.ImageListener listener3 = ImageLoader.getImageListener(viewHolder.ivItemTitle3, 0, R.mipmap.customer_service);
+        ImageLoader.ImageListener listener4 = ImageLoader.getImageListener(viewHolder.ivItemTitle4, 0, R.mipmap.customer_service);
         if(informationBeans.size()>0){ // 利用Volley加载图片
             mImageLoader.get(informationBeans.get(0).getCoverPic(), listener);
 //            CommonUtil.showImageLoader(informationBeans.get(0).getCoverPic(), viewHolder.ivInfoBg, R.mipmap.info_bg);
             viewHolder.tvInfoTitle.setText(informationBeans.get(0).getTitle());
         }
         if(informationBeans.size()>1){
-            mImageLoader.get(informationBeans.get(1).getCoverPic(), listener);
+            mImageLoader.get(informationBeans.get(1).getCoverPic(), listener1);
             viewHolder.rlItemTitle1.setVisibility(View.VISIBLE);
 //            CommonUtil.showImageLoader(informationBeans.get(1).getCoverPic(), viewHolder.ivItemTitle1, R.mipmap.info_bg);
             viewHolder.tvItemTitle1.setText(informationBeans.get(1).getTitle());
         }
         if(informationBeans.size()>2){
-            mImageLoader.get(informationBeans.get(2).getCoverPic(), listener);
+            mImageLoader.get(informationBeans.get(2).getCoverPic(), listener2);
             viewHolder.rlItemTitle2.setVisibility(View.VISIBLE);
 //            CommonUtil.showImageLoader(informationBeans.get(2).getCoverPic(), viewHolder.ivItemTitle2, R.mipmap.info_bg);
             viewHolder.tvItemTitle2.setText(informationBeans.get(2).getTitle());
         }
         if(informationBeans.size()>3){
-            mImageLoader.get(informationBeans.get(3).getCoverPic(), listener);
+            mImageLoader.get(informationBeans.get(3).getCoverPic(), listener3);
             viewHolder.rlItemTitle3.setVisibility(View.VISIBLE);
 //            CommonUtil.showImageLoader(informationBeans.get(3).getCoverPic(), viewHolder.ivItemTitle3, R.mipmap.info_bg);
             viewHolder.tvItemTitle3.setText(informationBeans.get(3).getTitle());
         }
         if(informationBeans.size()>4){
-            mImageLoader.get(informationBeans.get(4).getCoverPic(), listener);
+            mImageLoader.get(informationBeans.get(4).getCoverPic(), listener4);
             viewHolder.rlItemTitle4.setVisibility(View.VISIBLE);
 //            CommonUtil.showImageLoader(informationBeans.get(4).getCoverPic(), viewHolder.ivItemTitle4, R.mipmap.info_bg);
             viewHolder.tvItemTitle4.setText(informationBeans.get(4).getTitle());
