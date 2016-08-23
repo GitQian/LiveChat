@@ -265,9 +265,9 @@ public class InfoActFragment extends Fragment implements View.OnClickListener {
             if (materialInfoBeanList.size() % 5 == 0) {
                 ++pageNumber;
             }
-            getInformation(pageNumber, 5);
+            getInformation(1, 11);
         } else {
-            getInformation(pageNumber, 5);
+            getInformation(1, 11);
         }
 //        loadInfoActData();
     }
