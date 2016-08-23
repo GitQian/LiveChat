@@ -252,6 +252,7 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
                                     }
                                 }
                             }
+                            loadChat("");
                         } else if (code == 9001) {
                             CommonUtil.showTips(getActivity(), R.mipmap.warning, msg);
                         } else {
