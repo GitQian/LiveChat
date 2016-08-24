@@ -158,6 +158,7 @@ public class ConversationListAdapter extends BaseAdapter {
 //                }
 //            }
 
+            viewHolder.tvRedNumber.setVisibility(View.GONE);
             // 获取某人的未读消息数
             RongIM.getInstance().getRongIMClient().getUnreadCount(Conversation.ConversationType.PRIVATE, customerBean.getsAccount(), new RongIMClient.ResultCallback<Integer>() {
 

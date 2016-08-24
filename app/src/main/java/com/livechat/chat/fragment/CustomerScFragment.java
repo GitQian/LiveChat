@@ -334,6 +334,10 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (RongIM.getInstance() != null) {
             // 上下文, 类型, 目标ID, 内容(对方昵称)
+//            conversationListAdapter.add(customerBeanList);
+            conversationListAdapter.notifyDataSetChanged();
+            lvChatList.invalidateViews();
+            lvChatList.invalidate();
             RongIM.getInstance().startConversation(getContext(), Conversation.ConversationType.PRIVATE, customerBeanList.get(position).getsAccount(), customerBeanList.get(position).getsNickname());
         }
     }
