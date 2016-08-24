@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +51,7 @@ import io.rong.imlib.model.UserInfo;
  * 客服中心
  * Created by Administrator on 2016/3/21.
  */
-public class CustomerScFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener {
+public class CustomerScFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener, RongIM.OnReceiveUnreadCountChangedListener {
 
     private ImageButton ivBack;
     private ListView lvChatList;
@@ -110,6 +111,8 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
                 return false;
             }
         });
+        initRongMessage();
+
         // 设置是否可以下拉刷新
        refreshView.setPullRefreshEnable(true);
         // 设置是否可以上拉加载
@@ -182,6 +185,27 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
         loadChat("");
         super.onResume();
     }
+
+    /**
+     * 融云消息接收，及初始化
+     */
+    private void initRongMessage() {
+        final Conversation.ConversationType[] conversationTypes = {Conversation.ConversationType.PRIVATE, Conversation.ConversationType.DISCUSSION,
+                Conversation.ConversationType.GROUP, Conversation.ConversationType.SYSTEM,
+                Conversation.ConversationType.PUBLIC_SERVICE, Conversation.ConversationType.APP_PUBLIC_SERVICE};
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                RongIM.getInstance().setOnReceiveUnreadCountChangedListener(CustomerScFragment.this, conversationTypes);
+//				RongIM.getInstance().setOnReceiveUnreadCountChangedListener(mCountListener1, Conversation.ConversationType.APP_PUBLIC_SERVICE);
+            }
+        }, 500);
+
+
+    }
+
     /**
      * 更新Adapter
      * @param name
@@ -387,4 +411,9 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
         }
     };
 
+    @Override
+    public void onMessageIncreased(int i) {
+        Log.i("qiansheng", "Count:" + i);
+//        mUnreadCount.setVisibility(View.GONE);
+    }
 }

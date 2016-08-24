@@ -1,6 +1,7 @@
 package com.livechat.chat.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -158,7 +159,7 @@ public class ConversationListAdapter extends BaseAdapter {
 //            }
 
             // 获取某人的未读消息数
-            RongIM.getInstance().getRongIMClient().getUnreadCount(Conversation.ConversationType.APP_PUBLIC_SERVICE, customerBean.getsAccount(), new RongIMClient.ResultCallback<Integer>() {
+            RongIM.getInstance().getRongIMClient().getUnreadCount(Conversation.ConversationType.PRIVATE, customerBean.getsAccount(), new RongIMClient.ResultCallback<Integer>() {
 
                 @Override
                 public void onSuccess(Integer integer) {
