@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.database.DataSetObserver;
 import android.net.Uri;
 import android.os.Bundle;
-import io.rong.imlib.model.Message;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
+import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 
 /**
@@ -61,6 +63,8 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
     private ConversationListAdapter conversationListAdapter;
     private RequestQueue mQueue;
     private XRefreshView refreshView;
+
+    private Handler mHandler;
 
 
     @Override
@@ -89,6 +93,23 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
         postConversationInfo();
         setUserInfo();
 
+        mHandler = new Handler();
+        RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
+            @Override
+            public boolean onReceived(Message message, int i) {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            loadChat("");
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                return false;
+            }
+        });
         // 设置是否可以下拉刷新
        refreshView.setPullRefreshEnable(true);
         // 设置是否可以上拉加载
@@ -167,6 +188,9 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
      */
     public void loadChat(String name){
         // 查询本地数据显示
+        if (customerBeanList.size() != 0) {
+            customerBeanList.clear();
+        }
         customerBeanList = customerInfoService.getListCustomerInfo(name);
         if (customerBeanList != null && customerBeanList.size() > 0) {
             lvChatList.setVisibility(View.VISIBLE);
@@ -201,6 +225,14 @@ public class CustomerScFragment extends Fragment implements View.OnClickListener
 
         conversationListAdapter.add(customerBeanList);
         conversationListAdapter.notifyDataSetChanged();
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                lvChatList.invalidateViews();
+                lvChatList.invalidate();
+            }
+        });
+
     }
 
     /**
