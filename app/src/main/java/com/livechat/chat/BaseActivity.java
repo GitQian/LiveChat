@@ -21,7 +21,14 @@ public class BaseActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        ActivityCollector.addActivity(this);
 //        setSystemBarTintBg();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
     }
 
     /**

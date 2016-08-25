@@ -157,6 +157,8 @@ public class SettingActivity extends BaseActivity {
                                         intent.setClass(SettingActivity.this, OtherWayLoginActivity.class);
                                     }
                                     startActivity(intent);
+                                    SettingActivity.this.finish();
+                                    ActivityCollector.finishAllActivity();
                                     CommonUtil.showTips(SettingActivity.this, R.mipmap.smile, msg);
                                 } else {
                                     CommonUtil.showTips(SettingActivity.this, R.mipmap.warning, msg);
