@@ -21,7 +21,9 @@ public class ActivityCollector {
 
     public static void finishAllActivity() {
         for (Activity activity : activitys) {
-            activity.finish();
+            if (!activity.isFinishing()) {
+                activity.finish();
+            }
         }
     }
 }
