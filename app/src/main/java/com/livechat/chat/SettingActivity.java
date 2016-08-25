@@ -143,6 +143,7 @@ public class SettingActivity extends BaseActivity {
                                 if (code == 0) {
                                     // 断开融云服务器
                                     if (RongIM.getInstance() != null) {
+                                        RongIM.getInstance().logout();
                                         RongIM.getInstance().disconnect(true);
                                     }
                                     Intent intent = new Intent();
