@@ -10,10 +10,19 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.livechat.chat.entity.CustomerBean;
+import com.livechat.chat.service.CustomerInfoService;
 import com.livechat.chat.utils.CommonUtil;
 import com.livechat.chat.utils.Constant;
 import com.livechat.chat.widget.LoadingDialog;
 import com.livechat.chat.widget.ToggleButton;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.Conversation;
 
 /**
  * 新消息通知
@@ -25,10 +34,16 @@ public class NewsNotifyActivity extends BaseActivity implements View.OnClickList
     private LoadingDialog loadingDialog;
     private PopupWindow mPopWindow;
 
+    private CustomerInfoService customerInfoService;
+    private List<CustomerBean> customerBeanList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_notify);
+
+        customerInfoService = new CustomerInfoService(this);
+        customerBeanList = new ArrayList<>();
 
         initUI();
         addOnToggleChanged();
@@ -129,8 +144,25 @@ public class NewsNotifyActivity extends BaseActivity implements View.OnClickList
                 mPopWindow.dismiss();
                 break;
             case R.id.mClearChat:
-                CommonUtil.showTips(getApplicationContext(), R.mipmap.smile, "清理完毕");
-                mPopWindow.dismiss();
+                customerBeanList = customerInfoService.getListCustomerInfo("");
+                for (CustomerBean customerBean : customerBeanList) {
+                    customerBean.getsRongToken();
+                    RongIM.getInstance().getRongIMClient().clearMessages(Conversation.ConversationType.PRIVATE, customerBean.getsAccount(), new RongIMClient.ResultCallback<Boolean>() {
+                        @Override
+                        public void onSuccess(Boolean aBoolean) {
+                            CommonUtil.showTips(getApplicationContext(), R.mipmap.smile, "清理完毕");
+                            mPopWindow.dismiss();
+                        }
+
+                        @Override
+                        public void onError(RongIMClient.ErrorCode errorCode) {
+                            CommonUtil.showTips(getApplicationContext(), R.mipmap.warning, "清理失败");
+                            mPopWindow.dismiss();
+                        }
+                    });
+                }
+//                CommonUtil.showTips(getApplicationContext(), R.mipmap.smile, "清理完毕");
+//                mPopWindow.dismiss();
                 break;
             case R.id.mCancle:
                 mPopWindow.dismiss();
