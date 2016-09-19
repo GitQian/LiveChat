@@ -69,7 +69,7 @@ public class SetPwdActivity extends BaseActivity {
             CommonUtil.showTips(this, R.mipmap.warning, "请输入密码");
             return;
         }
-        if (!(sID.length() > 3 && sID.length() < 10)) {
+        if (!(sID.length() >= 3 && sID.length() <= 10)) {
             CommonUtil.showTips(this, R.mipmap.warning, "ID长度限制为3-10个字符");
             return;
         }

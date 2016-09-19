@@ -103,11 +103,11 @@ public class InfoActAdapter extends BaseAdapter implements View.OnClickListener 
         viewHolder.rlItemTitle4.setVisibility(View.GONE);
 
 
-        ImageLoader.ImageListener listener = ImageLoader.getImageListener(viewHolder.ivInfoBg, 0, R.mipmap.customer_service);
-        ImageLoader.ImageListener listener1 = ImageLoader.getImageListener(viewHolder.ivItemTitle1, 0, R.mipmap.customer_service);
-        ImageLoader.ImageListener listener2 = ImageLoader.getImageListener(viewHolder.ivItemTitle2, 0, R.mipmap.customer_service);
-        ImageLoader.ImageListener listener3 = ImageLoader.getImageListener(viewHolder.ivItemTitle3, 0, R.mipmap.customer_service);
-        ImageLoader.ImageListener listener4 = ImageLoader.getImageListener(viewHolder.ivItemTitle4, 0, R.mipmap.customer_service);
+        ImageLoader.ImageListener listener = ImageLoader.getImageListener(viewHolder.ivInfoBg, 0, R.mipmap.info_default);
+        ImageLoader.ImageListener listener1 = ImageLoader.getImageListener(viewHolder.ivItemTitle1, 0, R.mipmap.info_default);
+        ImageLoader.ImageListener listener2 = ImageLoader.getImageListener(viewHolder.ivItemTitle2, 0, R.mipmap.info_default);
+        ImageLoader.ImageListener listener3 = ImageLoader.getImageListener(viewHolder.ivItemTitle3, 0, R.mipmap.info_default);
+        ImageLoader.ImageListener listener4 = ImageLoader.getImageListener(viewHolder.ivItemTitle4, 0, R.mipmap.info_default);
         if(informationBeans.size()>0){ // 利用Volley加载图片
             mImageLoader.get(informationBeans.get(0).getCoverPic(), listener);
 //            CommonUtil.showImageLoader(informationBeans.get(0).getCoverPic(), viewHolder.ivInfoBg, R.mipmap.info_bg);

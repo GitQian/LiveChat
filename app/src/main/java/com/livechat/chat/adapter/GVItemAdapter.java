@@ -61,7 +61,7 @@ public class GVItemAdapter extends BaseAdapter {
         // 设置图标和标题
         EotherUrlBean eotherUrlBean = mlist.get(position);
         if (eotherUrlBean != null) {
-            CommonUtil.showImageLoader(eotherUrlBean.getsMenuIcon().equals("") ? "" : eotherUrlBean.getsMenuIcon(), viewHolder.ivItemIcon, R.mipmap.logo_icon);
+            CommonUtil.showImageLoader(eotherUrlBean.getsMenuIcon().equals("") ? "" : eotherUrlBean.getsMenuIcon(), viewHolder.ivItemIcon, 0);
             viewHolder.tvDeposit.setText(eotherUrlBean.getsMenuName());
         }
         return convertView;
